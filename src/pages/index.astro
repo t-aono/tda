@@ -1,0 +1,436 @@
+---
+import "../styles/global.css";
+import { Image } from "astro:assets";
+import pairProgrammingImg from "../assets/undraw_pair-programming_9jyg.svg";
+import modernProfessionalImg from "../assets/undraw_modern-professional_6pek.svg";
+import productIterationImg from "../assets/undraw_product-iteration_r2wg.svg";
+import developmentImg from "../assets/undraw_development_s4gv.svg";
+import businessPlanImg from "../assets/undraw_business-plan_wv9q.svg";
+
+import checkIcon from "../assets/icons/check.svg?raw";
+import chartBarIcon from "../assets/icons/chart-bar.svg?raw";
+import chatIcon from "../assets/icons/chat.svg?raw";
+import boltIcon from "../assets/icons/bolt.svg?raw";
+import officeIcon from "../assets/icons/office.svg?raw";
+import calendarIcon from "../assets/icons/calendar.svg?raw";
+import usersIcon from "../assets/icons/users.svg?raw";
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <!-- 1. メインのfavicon (SVG) -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <!-- 2. 古いブラウザ用のフォールバック (ICO または PNG) -->
+    <link rel="alternate icon" href="/favicon.ico" />
+    <!-- 3. Appleデバイス（iPhone/iPad）のホーム画面用 -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>T.D.A | 福岡のシステム開発・アプリ制作・技術相談サポート</title>
+    <meta
+      name="description"
+      content="福岡を拠点に、業務システム開発、Webアプリ制作、IT技術相談を承るT.D.Aです。業務効率化ツールからプロトタイプ開発まで、ビジネス課題を技術で解決します。"
+    />
+  </head>
+  <body class="bg-white text-gray-900 font-sans antialiased">
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-bold text-gray-900 tracking-tighter"
+          >T.D.A</a
+        >
+        <nav
+          class="hidden md:flex space-x-8 text-sm font-medium text-gray-500 md:items-center"
+        >
+          <a href="#services" class="hover:text-gray-900 transition">サービス</a
+          >
+          <a href="#strengths" class="hover:text-gray-900 transition">強み</a>
+          <a href="#works" class="hover:text-gray-900 transition">実績</a>
+          <a href="#pricing" class="hover:text-gray-900 transition">費用</a>
+          <a
+            href="#contact"
+            class="px-4 py-2 bg-gray-900 text-white rounded-md hover:bg-gray-700 transition"
+            >お問い合わせ</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Introduction -->
+      <section
+        class="py-20 md:py-32 container mx-auto px-6 flex flex-col-reverse md:flex-row items-center gap-12"
+      >
+        <div class="md:w-1/2 space-y-6">
+          <h1
+            class="text-4xl md:text-5xl font-extrabold leading-tight text-gray-900"
+          >
+            Web開発の知見と<br />
+            プログラミングスキルで、<br />
+            <span class="text-gray-900">ビジネスの課題</span>を解決します。
+          </h1>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            はじめまして。ソフトウェアエンジニアの青野と申します。<br />
+            福岡を拠点に「T.D.A」として活動しています。<br />
+            お客様のビジネス課題を解決するためのシステム開発や、技術的なお悩みを、専門用語を使わず分かりやすくサポートします。
+          </p>
+          <div class="pt-4">
+            <a
+              href="#contact"
+              class="inline-block bg-gray-900 hover:bg-gray-700 text-white text-lg font-semibold px-8 py-4 rounded-lg shadow-sm hover:shadow-md transition transform hover:-translate-y-1"
+            >
+              無料で相談する
+            </a>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <Image
+            src={pairProgrammingImg}
+            alt="Pair programming illustration"
+            class="w-full max-w-md h-auto"
+          />
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section
+        id="services"
+        class="py-20 bg-gray-50/50 border-t border-b border-gray-100"
+      >
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">提供サービス</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+              お客様のビジネス課題を解決するためのシステム開発や、技術的なお悩みをサポートします。
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1 flex justify-center">
+              <Image
+                src={developmentImg}
+                alt="Development illustration"
+                class="w-full max-w-md h-auto"
+              />
+            </div>
+            <div class="order-1 md:order-2 space-y-8">
+              <div class="bg-white p-8 rounded-lg border border-gray-200/80">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">
+                  システム・アプリ開発
+                </h3>
+                <p class="text-gray-600 mb-6">
+                  業務効率化ツールや、お客様向けのサービスサイトなど、目的に合わせたシステムをオーダーメイドで開発します。
+                </p>
+                <ul class="space-y-3 text-sm">
+                  <li class="flex items-start">
+                    <span class="w-5 h-5 text-gray-400 mr-2 mt-0.5 shrink-0">
+                      <Fragment set:html={checkIcon} />
+                    </span>
+                    <span
+                      ><strong>業務システム：</strong
+                      >社内の情報を整理・管理し、無駄な作業を削減</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="w-5 h-5 text-gray-400 mr-2 mt-0.5 shrink-0">
+                      <Fragment set:html={checkIcon} />
+                    </span>
+                    <span
+                      ><strong>Web サービス：</strong
+                      >パソコンやスマホで快適に動く、使いやすいアプリ開発</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="w-5 h-5 text-gray-400 mr-2 mt-0.5 shrink-0">
+                      <Fragment set:html={checkIcon} />
+                    </span>
+                    <span
+                      ><strong>HP・サイト制作：</strong
+                      >更新・管理が簡単なウェブサイト構築</span
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="bg-white p-8 rounded-lg border border-gray-200/80">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">
+                  技術サポート・技術に関する相談対応
+                </h3>
+                <p class="text-gray-600 mb-6">
+                  「社内に詳しい人がいない」「今のシステムのままで良いか不安」といったお悩みを解決します。
+                </p>
+                <ul class="space-y-3 text-sm">
+                  <li class="flex items-start">
+                    <span class="w-5 h-5 text-gray-400 mr-2 mt-0.5 shrink-0">
+                      <Fragment set:html={checkIcon} />
+                    </span>
+                    <span
+                      ><strong>プロトタイプ作成：</strong
+                      >アイデアを素早く形にし、動く画面で確認</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="w-5 h-5 text-gray-400 mr-2 mt-0.5 shrink-0">
+                      <Fragment set:html={checkIcon} />
+                    </span>
+                    <span
+                      ><strong>既存システムの改善：</strong
+                      >遅い・使いにくいといった問題を調査・改善</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="w-5 h-5 text-gray-400 mr-2 mt-0.5 shrink-0">
+                      <Fragment set:html={checkIcon} />
+                    </span>
+                    <span
+                      ><strong>開発の相談役：</strong
+                      >技術選定や費用対効果の高い方法をご提案</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Strengths -->
+      <section id="strengths" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">選ばれる3つの強み</h2>
+            <p class="text-gray-600">
+              エンジニアの視点だけでなく、ビジネス全体を考えた提案を重視しています。
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-gray-50/50 p-8 rounded-lg border border-gray-100">
+              <div
+                class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mb-6 text-gray-600"
+              >
+                <span class="w-6 h-6">
+                  <Fragment set:html={chartBarIcon} />
+                </span>
+              </div>
+              <h3 class="text-xl font-bold mb-4">
+                ビジネスゴールを意識した開発
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                言われたものを作るだけでなく、事業課題の解決に最適な手段を提案します。目的を達成するためのパートナーとして伴走します。
+              </p>
+            </div>
+            <div class="bg-gray-50/50 p-8 rounded-lg border border-gray-100">
+              <div
+                class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mb-6 text-gray-600"
+              >
+                <span class="w-6 h-6">
+                  <Fragment set:html={chatIcon} />
+                </span>
+              </div>
+              <h3 class="text-xl font-bold mb-4">
+                スムーズなコミュニケーション
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                進捗の透明性を保ち、オンラインミーティングツールやチャットツール等で密に連携。「エンジニア用語」ではなく、分かりやすい言葉で説明します。
+              </p>
+            </div>
+            <div class="bg-gray-50/50 p-8 rounded-lg border border-gray-100">
+              <div
+                class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mb-6 text-gray-600"
+              >
+                <span class="w-6 h-6">
+                  <Fragment set:html={boltIcon} />
+                </span>
+              </div>
+              <h3 class="text-xl font-bold mb-4">
+                無駄のない開発で、コストを最適化
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                必要な機能に絞って開発し、まずは小さくスタート。
+                将来の拡張を見据えつつ、コストとスピードのバランスを重視します。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Works -->
+      <section
+        id="works"
+        class="py-20 bg-gray-50/50 border-t border-b border-gray-100"
+      >
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">実績</h2>
+            <p class="text-gray-600">
+              これまでの主な実績の一部をご紹介します。
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="bg-white p-6 rounded-lg border border-gray-200/80 flex flex-col"
+            >
+              <div
+                class="h-48 bg-gray-100 rounded-lg mb-6 flex items-center justify-center text-gray-300"
+              >
+                <span class="w-16 h-16">
+                  <Fragment set:html={officeIcon} />
+                </span>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                不動産会社向け業務管理システム
+              </h3>
+              <p class="text-gray-600 text-sm mb-4 grow">
+                契約情報や経費を一元管理し、関連書類（画像）もクラウド上で保存可能なWebシステム。
+              </p>
+              <div class="pt-4 border-t border-gray-100 mt-auto">
+                <span
+                  class="text-xs font-semibold bg-gray-100 text-gray-800 px-2 py-1 rounded"
+                  >Webシステム</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="bg-white p-6 rounded-lg border border-gray-200/80 flex flex-col"
+            >
+              <div
+                class="h-48 bg-gray-100 rounded-lg mb-6 flex items-center justify-center text-gray-300"
+              >
+                <span class="w-16 h-16">
+                  <Fragment set:html={calendarIcon} />
+                </span>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                整骨院向け予約管理サービス
+              </h3>
+              <p class="text-gray-600 text-sm mb-4 grow">
+                管理者は柔軟に設定でき、利用者はスマホから手軽に予約可能なWebアプリケーション。
+              </p>
+              <div class="pt-4 border-t border-gray-100 mt-auto">
+                <span
+                  class="text-xs font-semibold bg-gray-100 text-gray-800 px-2 py-1 rounded"
+                  >予約システム</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="bg-white p-6 rounded-lg border border-gray-200/80 flex flex-col"
+            >
+              <div
+                class="h-48 bg-gray-100 rounded-lg mb-6 flex items-center justify-center text-gray-300"
+              >
+                <span class="w-16 h-16">
+                  <Fragment set:html={usersIcon} />
+                </span>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                小規模組織向けスケジュール管理
+              </h3>
+              <p class="text-gray-600 text-sm mb-4 grow">
+                チームごとの予定を月単位で一覧表示し、全体の動きを直感的に把握できるツール。
+              </p>
+              <div class="pt-4 border-t border-gray-100 mt-auto">
+                <span
+                  class="text-xs font-semibold bg-gray-100 text-gray-800 px-2 py-1 rounded"
+                  >業務効率化</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section id="pricing" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+              <Image
+                src={businessPlanImg}
+                alt="Business plan illustration"
+                class="w-full max-w-md mx-auto h-auto"
+              />
+            </div>
+            <div class="md:w-1/2">
+              <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                ご契約・費用について
+              </h2>
+              <p class="text-gray-600 mb-8">
+                お客様の課題や状況に合わせて、最適なプランをご提案します。ITに詳しくない方でも、分かりやすい言葉で丁寧にご説明します。
+              </p>
+
+              <div class="space-y-6">
+                <div
+                  class="bg-gray-50/50 p-6 rounded-lg border border-gray-100"
+                >
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">
+                    プロジェクト単位（スポット開発）
+                  </h3>
+                  <p class="text-gray-600 mb-4 text-sm">
+                    「これを作りたい」という明確なゴールがある場合に適しています。
+                  </p>
+                  <div class="text-right">
+                    <span class="text-sm text-gray-500">費用感：</span>
+                    <span class="font-bold text-gray-900"
+                      >要件に応じたお見積もり</span
+                    >
+                  </div>
+                </div>
+
+                <div
+                  class="bg-gray-50/50 p-6 rounded-lg border border-gray-100"
+                >
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">
+                    月額サポート（保守）
+                  </h3>
+                  <p class="text-gray-600 mb-4 text-sm">
+                    「何から始めればいいか分からない」「定期的に相談したい」という場合に。
+                  </p>
+                  <div class="text-right">
+                    <span class="text-sm text-gray-500">費用感：</span>
+                    <span class="font-bold text-gray-900"
+                      >月額固定（予算応相談）</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="py-20 bg-gray-900 text-white text-center">
+        <div class="container mx-auto px-6 max-w-3xl">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">お問い合わせ</h2>
+          <p class="text-gray-300 text-lg mb-10">
+            少しでも興味を持っていただけましたら、お気軽にご連絡ください。<br />
+            カジュアルにお話しするだけでも大歓迎です！
+          </p>
+          <a
+            href="https://www.notion.so/2cee4fd300db80e4873bcd8f2f85f7aa?pvs=21"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block bg-white text-gray-900 font-bold py-4 px-10 rounded-lg shadow-lg hover:bg-gray-200 transition transform hover:scale-105"
+          >
+            お問い合わせフォームへ
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="bg-white border-t border-gray-200 text-gray-500 py-10 text-center text-sm"
+    >
+      <div class="container mx-auto px-6">
+        <p>&copy; {new Date().getFullYear()} T.D.A. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
