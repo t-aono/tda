@@ -20,11 +20,21 @@ import usersIcon from "../assets/icons/users.svg?raw";
   <head>
     <meta charset="utf-8" />
     <!-- 1. メインのfavicon (SVG) -->
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href={`${import.meta.env.BASE_URL}favicon.svg`}
+      type="image/svg+xml"
+    />
     <!-- 2. 古いブラウザ用のフォールバック (ICO または PNG) -->
-    <link rel="alternate icon" href="/favicon.ico" />
+    <link
+      rel="alternate icon"
+      href={`${import.meta.env.BASE_URL}favicon.ico`}
+    />
     <!-- 3. Appleデバイス（iPhone/iPad）のホーム画面用 -->
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      href={`${import.meta.env.BASE_URL}apple-touch-icon.png`}
+    />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>T.D.A | 福岡のシステム開発・アプリ制作・技術相談サポート</title>
