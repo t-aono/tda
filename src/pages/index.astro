@@ -19,21 +19,14 @@ import usersIcon from "../assets/icons/users.svg?raw";
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <!-- 1. メインのfavicon (SVG) -->
     <link
       rel="icon"
-      href={`${import.meta.env.BASE_URL}favicon.svg`}
+      href={`${import.meta.env.BASE_URL}/favicon.svg`}
       type="image/svg+xml"
     />
-    <!-- 2. 古いブラウザ用のフォールバック (ICO または PNG) -->
     <link
       rel="alternate icon"
-      href={`${import.meta.env.BASE_URL}favicon.ico`}
-    />
-    <!-- 3. Appleデバイス（iPhone/iPad）のホーム画面用 -->
-    <link
-      rel="apple-touch-icon"
-      href={`${import.meta.env.BASE_URL}apple-touch-icon.png`}
+      href={`${import.meta.env.BASE_URL}/favicon.ico`}
     />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
